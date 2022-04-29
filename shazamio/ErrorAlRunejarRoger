@@ -1,0 +1,25 @@
+
+Warning (from warnings module):
+  File "C:\Users\roger\OneDrive\UNi\Uni d'ara\TFG\PlanA\Codis\shazamio\metodeshazamio.py", line 10
+    loop = asyncio.get_event_loop()
+DeprecationWarning: There is no current event loop
+Traceback (most recent call last):
+  File "C:\Users\roger\OneDrive\UNi\Uni d'ara\TFG\PlanA\Codis\shazamio\metodeshazamio.py", line 11, in <module>
+    loop.run_until_complete(main())
+  File "C:\Users\roger\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 646, in run_until_complete
+    return future.result()
+  File "C:\Users\roger\OneDrive\UNi\Uni d'ara\TFG\PlanA\Codis\shazamio\metodeshazamio.py", line 7, in main
+    out = await shazam.recognize_song('a.ogg')
+  File "C:\Users\roger\AppData\Local\Programs\Python\Python310\lib\site-packages\shazamio\api.py", line 298, in recognize_song
+    song = await get_song(data=data)
+  File "C:\Users\roger\AppData\Local\Programs\Python\Python310\lib\site-packages\shazamio\utils.py", line 31, in get_song
+    song_bytes = await get_file_bytes(file=data)
+  File "C:\Users\roger\AppData\Local\Programs\Python\Python310\lib\site-packages\shazamio\utils.py", line 24, in get_file_bytes
+    async with aiofiles.open(file, mode='rb') as f:
+  File "C:\Users\roger\AppData\Local\Programs\Python\Python310\lib\site-packages\aiofiles\base.py", line 75, in __aenter__
+    self._obj = await self._coro
+  File "C:\Users\roger\AppData\Local\Programs\Python\Python310\lib\site-packages\aiofiles\threadpool\__init__.py", line 80, in _open
+    f = yield from loop.run_in_executor(executor, cb)
+  File "C:\Users\roger\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+FileNotFoundError: [Errno 2] No such file or directory: 'a.ogg'
