@@ -1,9 +1,4 @@
-import requests
-
-song = 'Hasta la raíz'
-artist = 'Natalia Lafourcade'
-
-def normalitzar_nom_laCuerda(song, artist): #aquesta funcio normalitza els noms adaptant-los al format web laCuerda i
+def normalitzar_lacuerda(song, artist): #aquesta funcio normalitza els noms adaptant-los al format web laCuerda i
     # retorna la url la cual sha de buscar.
     song = song.lower()
     artist = artist.lower()
@@ -43,22 +38,6 @@ def normalitzar_nom_laCuerda(song, artist): #aquesta funcio normalitza els noms 
         s = s[1:]
     if a[0] == '_':
         a = a[1:]
-    
+
     url = 'https://acordes.lacuerda.net/'+a+'/'+s
-
-
-
-r = requests.get(url)
-rt = r.text
-# Utilitzar la funcion find per trobar la part on posa Letra y acordes, les
-# vegades que faci falta. Pero i si a la lletra hi ha aquestes paraules exactes?
-# el programa o codi es podria conforndre.
-# I si la pàgina es tradueix a un altre idioma?
-
-#LyA = rt.find('Letra y Acordes')
-#print(rt[0])
-#print(url)
-
-import webbrowser
-webbrowser.open(url)
-
+    return url
