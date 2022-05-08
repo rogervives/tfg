@@ -40,4 +40,4 @@ def normalitzar_lacuerda(song, artist): #aquesta funcio normalitza els noms adap
         a = a[1:]
 
     url = 'https://acordes.lacuerda.net/'+a+'/'+s
-    return url
+    return url,a,s
