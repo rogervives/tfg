@@ -2,6 +2,10 @@ import requests
 import webbrowser
 from normalitzar_lacuerda import normalitzar_lacuerda
 
+#POSAR IMPORTNAT!!!!!!!!!!
+#   status_code = req.status_code
+#   if status code == 200:
+
 song = 'Hasta la raíz'
 artist = 'Natalia Lafourcade'
 

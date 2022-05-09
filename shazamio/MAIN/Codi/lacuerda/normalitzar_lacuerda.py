@@ -3,7 +3,7 @@ def normalitzar_lacuerda(song, artist): #aquesta funcio normalitza els noms adap
     song = song.lower()
     artist = artist.lower()
 
-    def normalize(z):
+    def normalize(z): #posar que elemini també els caracters especials??????????
         replacements = (
             ("á", "a"),
             ("é", "e"),
