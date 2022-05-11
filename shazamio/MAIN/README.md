@@ -13,5 +13,7 @@
      1) Escollir versió d'acords (si n'hi ha).
         ##### `escollir_acords_lacuerda.py`
      2) Extreure acords:
+     - Obtenir els acords en un cert format.
+     - Obtenir les imatges de la posició dels dits dels acords.
         ##### `extreure_acords_lacuerda.py`
-     3) 
+     4) 
