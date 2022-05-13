@@ -170,7 +170,7 @@ ventana = Tk()
 ventana.title("Gravadora d'Àudio mp3")
 
 # VARIABLES INICIALES
-directorio_actual = "C:/Users/roger/OneDrive/UNi/Unidara/TFG/PlanA/Repositori/shazamio/MAIN/Audios_prova" #StringVar()
+directorio_actual = StringVar()
 grabando = False
 reproduciendo = False
 CHUNK = 1024
