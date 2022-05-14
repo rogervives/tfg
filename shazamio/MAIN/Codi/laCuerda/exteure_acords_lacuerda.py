@@ -12,9 +12,9 @@ shtml3 = 'https://acordes.lacuerda.net/natalia_lafourcade/hasta_la_raiz-3.shtml'
 def extreure_acords_lacuerda(shtml):
     shtmlpage = requests.get(shtml)
     soup = BeautifulSoup(shtmlpage.text, 'html.parser')
-    print(soup)
+    #print(soup)
 
     lletra = soup.find('div', {'id': "t_body"})
-    #print(lletra.getText())
+    print(lletra.getText())
 
 extreure_acords_lacuerda(shtml2)

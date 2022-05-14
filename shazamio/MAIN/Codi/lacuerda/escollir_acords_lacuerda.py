@@ -42,14 +42,17 @@ def escollir_acords_lacuerda(url,a,s):
     #print(acords[0])
     #print(type(opcions))
 
+    #   Escull directament la canco 1
+
+
     #   Input per escollir la opció.
     #   Es podria posar que et dones directament els acords si només hi ha una opció????????????
-    print('Opcions disponibles')
-    contador = 0
-    for i in l_opcions:
-        contador += 1
-        print(contador)
-    opcio = input('Escriu quina opció vols: ')
+    #print('Opcions disponibles')
+    #contador = 0
+    #for i in l_opcions:
+    #    contador += 1
+    #    print(contador)
+    #opcio = input('Escriu quina opció vols: ')
     #webbrowser.open(l_opcions[int(opcio)-1])
 
 escollir_acords_lacuerda(url,a,s)
