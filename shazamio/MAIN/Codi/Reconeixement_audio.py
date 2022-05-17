@@ -7,8 +7,8 @@ from pprint import pprint as pp
 '''
 RECONEIXEMENT DE L'ÀUDIO
 '''
-def reconeixement(recording_path: str) -> str, str:
-    async def reconeixement_main():
+def reconeixement_audio(recording_path: str): # -> str, str:
+    async def reconeixement_main(recording_path=None):
         shazam = Shazam()
         out = await shazam.recognize_song(recording_path)
         song = out['track']['title']

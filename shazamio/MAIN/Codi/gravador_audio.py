@@ -5,7 +5,7 @@ import os
 import wave
 import threading
 
-def gravadora():
+def fes_gravacio():
     def clear_contador():
         global contador, contador1, contador2
         contador = 0
@@ -14,9 +14,9 @@ def gravadora():
 
 
     def dire():
-        #directorio_actual.set(os.getcwd())
         directorio_actual.set(os.getcwd())
-        print(f"mostrar directori actual dins de dire():{directorio_actual}")
+        #directorio_actual.set(r"C:\Users\roger\OneDrive\UNi\Unidara\TFG\PlanA\Repositori\shazamio\MAIN\Recordings")
+        #print(f"mostrar directori actual dins de dire():{directorio_actual}")
 
     def iniciar():
         global grabando
@@ -170,8 +170,8 @@ def gravadora():
     ventana.title("Gravadora d'Àudio mp3")
 
     # VARIABLES INICIALES
-    #directorio_actual = StringVar()
-    directorio_actual = r"C:\Users\roger\OneDrive\UNi\Unidara\TFG\PlanA\Repositori\shazamio\MAIN\Recordings"
+    directorio_actual = StringVar()
+    #directorio_actual = r"C:\Users\roger\OneDrive\UNi\Unidara\TFG\PlanA\Repositori\shazamio\MAIN\Recordings"
     grabando = False
     reproduciendo = False
     CHUNK = 1024
@@ -198,8 +198,8 @@ def gravadora():
     etDir = Entry(ventana, width=77, bg="lavender", textvariable=directorio_actual)
     etDir.place(x=10, y=0)
 
-    #dire()
+    dire()
 
     ventana.mainloop()
 
-gravadora()
+fes_gravacio()

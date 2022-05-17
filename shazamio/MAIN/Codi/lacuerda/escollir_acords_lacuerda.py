@@ -2,11 +2,6 @@ from bs4 import BeautifulSoup
 import csv
 import webbrowser
 import requests
-from normalitzar_lacuerda import normalitzar_lacuerda
-
-song = 'Hasta la raíz'
-artist = 'Natalia Lafourcade'
-url,a,s = normalitzar_lacuerda(song, artist)
 
 def escollir_acords_lacuerda(url,a,s):
 
@@ -43,7 +38,7 @@ def escollir_acords_lacuerda(url,a,s):
     #print(type(opcions))
 
     #   Escull directament la canco 1
-
+    return l_opcions[0]
 
     #   Input per escollir la opció.
     #   Es podria posar que et dones directament els acords si només hi ha una opció????????????
@@ -55,4 +50,4 @@ def escollir_acords_lacuerda(url,a,s):
     #opcio = input('Escriu quina opció vols: ')
     #webbrowser.open(l_opcions[int(opcio)-1])
 
-escollir_acords_lacuerda(url,a,s)
+#escollir_acords_lacuerda(url,a,s)

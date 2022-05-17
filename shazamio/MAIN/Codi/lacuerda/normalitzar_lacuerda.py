@@ -1,9 +1,9 @@
-def normalitzar_lacuerda(song, artist): #aquesta funcio normalitza els noms adaptant-los al format web laCuerda i
+def normalitzar_lacuerda(artist, song):  # aquesta funcio normalitza els noms adaptant-los al format web laCuerda i
     # retorna la url la cual sha de buscar.
     song = song.lower()
     artist = artist.lower()
 
-    def normalize(z): #posar que elemini també els caracters especials??????????
+    def normalize(z):  # posar que elemini també els caracters especials??????????
         replacements = (
             ("á", "a"),
             ("é", "e"),
@@ -30,14 +30,14 @@ def normalitzar_lacuerda(song, artist): #aquesta funcio normalitza els noms adap
     a = ''
 
     for e in song:
-        s = s+'_'+e
+        s = s + '_' + e
     for e in artist:
-        a = a+'_'+e
+        a = a + '_' + e
 
     if s[0] == '_':
         s = s[1:]
     if a[0] == '_':
         a = a[1:]
 
-    url = 'https://acordes.lacuerda.net/'+a+'/'+s
-    return url,a,s
+    url = 'https://acordes.lacuerda.net/' + a + '/' + s
+    return url, a, s
