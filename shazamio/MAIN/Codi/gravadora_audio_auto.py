@@ -2,7 +2,7 @@ import pyaudio
 import wave
 from pydub import AudioSegment
 
-def fes_gravacio_auto():
+def gravadora_audio_auto():
     #DEFINIMOS PARAMETROS
     FORMAT=pyaudio.paInt16
     CHANNELS=2
@@ -43,3 +43,5 @@ def fes_gravacio_auto():
     #   Passem arxiu de wav a mp3
     wav_audio = AudioSegment.from_file("grabacion.wav", format="wav")
     wav_audio.export("grabacion.mp3", format="mp3")
+
+    return "grabacion.mp3"
