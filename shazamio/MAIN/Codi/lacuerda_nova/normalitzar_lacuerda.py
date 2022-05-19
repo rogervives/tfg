@@ -1,4 +1,4 @@
-def normalitzar_lacuerda(artist, song):  # aquesta funcio normalitza els noms adaptant-los al format web laCuerda i
+def normalitzar_lacuerda_i_url(artist, song):  # aquesta funcio normalitza els noms adaptant-los al format web laCuerda i
     # retorna la url la cual sha de buscar.
     song = song.lower()
     artist = artist.lower()
@@ -39,5 +39,5 @@ def normalitzar_lacuerda(artist, song):  # aquesta funcio normalitza els noms ad
     if a[0] == '_':
         a = a[1:]
 
-    url = 'https://acordes.lacuerda.net/' + a + '/' + s
-    return url, a, s
+    #url = 'https://acordes.lacuerda.net/' + a + '/' + s
+    return a, s

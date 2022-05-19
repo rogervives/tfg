@@ -3,7 +3,11 @@ import csv
 import webbrowser
 import requests
 
-def escollir_acords_lacuerda(url,a,s):
+# EXEMPLE:
+s = "caminando_por_la_vida"
+url = "https://acordes.lacuerda.net/melendi/caminando_por_la_vida"
+
+def escollir_acords_lacuerda(url, s):
 
     #   Preparar informació per poder treballar amb ella.
     urlpage = requests.get(url)
@@ -50,4 +54,4 @@ def escollir_acords_lacuerda(url,a,s):
     #opcio = input('Escriu quina opció vols: ')
     #webbrowser.open(l_opcions[int(opcio)-1])
 
-#escollir_acords_lacuerda(url,a,s)
+escollir_acords_lacuerda(url,s)

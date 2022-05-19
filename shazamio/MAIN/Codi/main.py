@@ -1,8 +1,8 @@
-from gravadora_audio_auto import gravadora_audio_auto
+from shazamio.MAIN.Codi.gravadora.gravadora_audio_auto import gravadora_audio_auto
 from reconeixement.reconeixement_a import reconeixement_audio
-from lacuerda.normalitzar_lacuerda import normalitzar_lacuerda
-from lacuerda.escollir_acords_lacuerda import escollir_acords_lacuerda
-from lacuerda.extreure_acords_lacuerda import extreure_acords_lacuerda
+from shazamio.MAIN.Codi.lacuerda_nova.normalitzar_lacuerda import normalitzar_lacuerda
+from shazamio.MAIN.Codi.lacuerda_nova.escollir_acords_lacuerda import escollir_acords_lacuerda
+from shazamio.MAIN.Codi.lacuerda_nova.extreure_acords_lacuerda import extreure_acords_lacuerda
 
 def main():
     # Gravar àudio
