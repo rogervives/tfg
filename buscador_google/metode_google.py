@@ -30,3 +30,6 @@ def buscar_webs_google(artist, song): #amb aquesta funció, buscar al buscador d
 
 #l = buscar_webs_google(artist, song)
 #print(l)
+
+#Podria ser que apareguessin dues opcions de tusacordes, una a l'inici, i l'altre al final de les r. Tenia
+#pensat fer un contador pero tampoc ho tinc molt clar.
