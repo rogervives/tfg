@@ -10,8 +10,8 @@ from obtenir_webs_ordre import webs_per_ordre
 
 def main_nou():
     # Gravacio
-    recorded_audio = gravadora_audio_auto()  # Retorna la ruta del audio gravat
-    print(f"vull veure quin em dona {recorded_audio}")
+    #recorded_audio = gravadora_audio_auto()  # Retorna la ruta del audio gravat
+    #print(f"vull veure quin em dona {recorded_audio}")
 
     # Reconeixement
     artist, song = reconeixement_audio(recorded_audio)
@@ -24,6 +24,8 @@ def main_nou():
     #       Per ordre, treballar webs:
     # lacuerda
     l_lletres = webs_per_ordre(l_resultats_webs)
-    return print(l_lletres)
+    for web, lletra_web in l_lletres:
+        print("AIXÒ ÉS DE: " + web + "\n\n" + lletra_web + "\n\n\n\n\n\n\n\n")
+    #return print(l_lletres)
 
 main_nou()
