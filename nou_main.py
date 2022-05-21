@@ -1,3 +1,4 @@
+from gravadora.gravadora_audio_auto import gravadora_audio_auto
 from reconeixement.reconeixement_a import reconeixement_audio
 from buscador_google.metode_google import buscar_webs_google
 from obtenir_webs_ordre import webs_per_ordre
@@ -5,11 +6,12 @@ from obtenir_webs_ordre import webs_per_ordre
 # EXEMPLE
 #artist = "melendi"
 #song = "caminando por la vida"
-recorded_audio = "reconeixement/Audios_prova/f.mp3"
+#recorded_audio = "reconeixement/Audios_prova/d.mp3"
 
 def main_nou():
     # Gravacio
-    #recorded_audio = gravadora_audio_auto()  # Retorna la ruta del audio gravat
+    recorded_audio = gravadora_audio_auto()  # Retorna la ruta del audio gravat
+    print(f"vull veure quin em dona {recorded_audio}")
 
     # Reconeixement
     artist, song = reconeixement_audio(recorded_audio)

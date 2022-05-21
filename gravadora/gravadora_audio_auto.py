@@ -9,7 +9,7 @@ def gravadora_audio_auto():
     RATE=44100
     CHUNK=1024
     duracion=10
-    archivo="grabacion.wav"
+    archivo="gravadora/grabacion.wav"
 
     #INICIAMOS "pyaudio"
     audio=pyaudio.PyAudio()
@@ -41,7 +41,9 @@ def gravadora_audio_auto():
     waveFile.close()
 
     #   Passem arxiu de wav a mp3
-    wav_audio = AudioSegment.from_file("grabacion.wav", format="wav")
-    wav_audio.export("grabacion.mp3", format="mp3")
+    wav_audio = AudioSegment.from_file("gravadora/grabacion.wav", format="wav")
+    wav_audio.export("gravadora/grabacion.mp3", format="mp3")
 
-    return "grabacion.mp3"
+    return "gravadora/grabacion.mp3"
+
+#gravadora_audio_auto()
