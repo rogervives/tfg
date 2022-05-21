@@ -4,8 +4,8 @@ import requests
 from googlesearch import search
 
 # EXEMPLE:
-#artist = "melendi"
-#song = "caminando por la vida"
+# artist = "melendi"
+# song = "caminando por la vida"
 
 def buscar_webs_google(artist, song): #amb aquesta funció, buscar al buscador de google tal qual el nom i cançó
     #llista de webs posibles:
@@ -28,8 +28,8 @@ def buscar_webs_google(artist, song): #amb aquesta funció, buscar al buscador d
 
     return l_resultats
 
-#l = buscar_webs_google(artist, song)
-#print(l)
+# l = buscar_webs_google(artist, song)
+# print(l)
 
 #Podria ser que apareguessin dues opcions de tusacordes, una a l'inici, i l'altre al final de les r. Tenia
 #pensat fer un contador pero tampoc ho tinc molt clar.
