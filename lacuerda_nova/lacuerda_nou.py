@@ -20,9 +20,13 @@ def lacuerda_nou(url):
     # Normalitzem noms (ja que lacuerda es un cas especial)
     #a, s = normalitzar_lacuerda_i_url(artist, song)
     # Escollim versió d'acords de la canco, en forma de link (cas concret d'aquesta web).
-    versio = escollir_acords_lacuerda(url) # de moment em dona la primera opcio nomes
-    # Obtenim acords en format text.
-    lletra = extreure_acords_lacuerda(versio)
+    if "shtml" in url: # el link ja és el d'una versió
+        # Obtenir acords en format text.
+        lletra = extreure_acords_lacuerda(url)
+    else:
+        versio = escollir_acords_lacuerda(url) # de moment em dona la primera opcio nomes
+        # Obtenim acords en format text.
+        lletra = extreure_acords_lacuerda(versio)
 
     return lletra.getText()
 
