@@ -8,6 +8,8 @@ from googlesearch import search
 # song = "caminando por la vida"
 
 def buscar_webs_google(artist, song): #amb aquesta funció, buscar al buscador de google tal qual el nom i cançó
+    dic_webs = {"lacuerda": 0, "tusacordes": 0, "ultimate-guitar": 0, "acordesweb": 0, "cifraclub": 0}
+
     #llista de webs posibles:
     #   lacuerda
     #   tusacordes
@@ -23,8 +25,9 @@ def buscar_webs_google(artist, song): #amb aquesta funció, buscar al buscador d
     l_resultats = [] #llista ordenada de millor a pitjor segons les cookies
     for r in resultats:
         for web in llista_webs:
-            if web in r:
+            if web in r and dic_webs[web] == 0:
                 l_resultats.append([web, r])
+                dic_webs[web] += 1
 
     return l_resultats
 
