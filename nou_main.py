@@ -6,23 +6,23 @@ from obtenir_webs_ordre import webs_per_ordre
 # EXEMPLE
 #artist = "melendi"
 #song = "caminando por la vida"
-#recorded_audio = "reconeixement/Audios_prova/d.mp3"
+
+recorded_audio = "reconeixement/Audios_prova/j.mp3"
 
 def main_nou():
-    # Gravacio
+    #   Gravació
     #recorded_audio = gravadora_audio_auto()  # Retorna la ruta del audio gravat
     #print(f"vull veure quin em dona {recorded_audio}")
 
-    # Reconeixement
+    #   Reconeixement
     artist, song = reconeixement_audio(recorded_audio)
     print(f"a veure que em dona de noms{artist, song}")
 
-    # Busqueda google, obtenir links webs
+    #   Cerca google, obtenir links webs
     l_resultats_webs = buscar_webs_google(artist, song) #   l_resultats_webs = [[nomWEB, linkWEB]]
     print(f"webs que em dona{l_resultats_webs}")
 
-    #       Per ordre, treballar webs:
-    # lacuerda
+    #   Per ordre, treballar webs:
     l_lletres = webs_per_ordre(l_resultats_webs)
     for web, lletra_web in l_lletres:
         print("AIXÒ ÉS DE: " + web + "\n\n" + lletra_web + "\n\n\n\n\n\n\n\n")
