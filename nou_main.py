@@ -6,13 +6,12 @@ from obtenir_webs_ordre import webs_per_ordre
 # EXEMPLE
 #artist = "melendi"
 #song = "caminando por la vida"
-
-recorded_audio = "reconeixement/Audios_prova/j.mp3"
+#recorded_audio = "reconeixement/Audios_prova/j.mp3"
 
 def main_nou():
     #   Gravació
-    #recorded_audio = gravadora_audio_auto()  # Retorna la ruta del audio gravat
-    #print(f"vull veure quin em dona {recorded_audio}")
+    recorded_audio = gravadora_audio_auto()  # Retorna la ruta del audio gravat
+    print(f"vull veure quin em dona {recorded_audio}")
 
     #   Reconeixement
     artist, song = reconeixement_audio(recorded_audio)
