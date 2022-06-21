@@ -1,4 +1,4 @@
-from lacuerda_nova.lacuerda_nou import lacuerda_nou
+from lacuerda.lacuerda import lacuerda
 from tusacordes.tusacordes import tusacordes
 from cifraclub.cifraclub import cifraclub
 
@@ -14,7 +14,7 @@ def webs_per_ordre(l_resultats):
         if web == "lacuerda":
             if dic_webs["lacuerda"] == 0:
                 # executar extraccio per lacuerda. #ara nomes pq esta posat que es doni la primera opcio sino hi hauria mes cosa
-                lletra_lacuerda = lacuerda_nou(link)
+                lletra_lacuerda = lacuerda(link)
                 l_lletres.append([web, lletra_lacuerda])
                 dic_webs["lacuerda"] += 1
         elif web == "tusacordes":

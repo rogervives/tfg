@@ -1,24 +1,30 @@
-from shazamio.MAIN.Codi.gravadora.gravadora_audio_auto import gravadora_audio_auto
+from gravadora.gravadora_audio_auto import gravadora_audio_auto
 from reconeixement.reconeixement_a import reconeixement_audio
-from shazamio.MAIN.Codi.lacuerda_nova.normalitzar_lacuerda import normalitzar_lacuerda
-from shazamio.MAIN.Codi.lacuerda_nova.escollir_acords_lacuerda import escollir_acords_lacuerda
-from shazamio.MAIN.Codi.lacuerda_nova.extreure_acords_lacuerda import extreure_acords_lacuerda
+from buscador_google.metode_google import buscar_webs_google
+from obtenir_webs_ordre import webs_per_ordre
+
+# EXEMPLE
+#artist = "melendi"
+#song = "caminando por la vida"
+#recorded_audio = "reconeixement/Audios_prova/j.mp3"
 
 def main():
-    # Gravar àudio
-    recorded_audio = gravadora_audio_auto() #Retorna la ruta del audio gravat
-    # Reconeixement cançó
-    #recorded_audio = "c.mp3" #r"C:\Users\roger\OneDrive\UNi\Unidara\TFG\PlanA\Repositori\shazamio\MAIN\Audios_prova\c.mp3"
+    #   Gravació
+    recorded_audio = gravadora_audio_auto()  # Retorna la ruta del audio gravat
+    print(f"vull veure quin em dona {recorded_audio}")
+
+    #   Reconeixement
     artist, song = reconeixement_audio(recorded_audio)
-    # Normalitzar lacuerda
-    url, a, s = normalitzar_lacuerda(artist, song)
-    # Escollir versió d'acords
-    urlversio = escollir_acords_lacuerda(url, a, s)
-    # Extreure acords
-    lletra_acords = extreure_acords_lacuerda(urlversio)
-    return print(lletra_acords.getText())
+    print(f"a veure que em dona de noms{artist, song}")
+
+    #   Cerca google, obtenir links webs
+    l_resultats_webs = buscar_webs_google(artist, song) #   l_resultats_webs = [[nomWEB, linkWEB]]
+    print(f"webs que em dona{l_resultats_webs}")
+
+    #   Per ordre, treballar webs:
+    l_lletres = webs_per_ordre(l_resultats_webs)
+    for web, lletra_web in l_lletres:
+        print("AIXÒ ÉS DE: " + web + "\n\n" + lletra_web + "\n\n\n\n\n\n\n\n")
+    #return print(l_lletres)
 
 main()
-
-#Cwd = os.getcwd()
-#print(Cwd)
