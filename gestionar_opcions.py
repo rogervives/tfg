@@ -17,3 +17,5 @@ def opcions_per_escollir(l_lletres):
         nova_opcio = input("\n\n\n\nPrémer intro per escollir una nova opció: ")
         if nova_opcio == "":
             pass
+        elif nova_opcio == "stop":
+            break
