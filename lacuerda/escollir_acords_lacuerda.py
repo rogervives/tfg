@@ -24,10 +24,13 @@ def escollir_acords_lacuerda(url):
 
     #   Obtenir els links de les opcions disponibles d'acords.
     opcions = soup.find_all('a')
+    #print("Passa per aquí")
     l_shtml = []
     for o in opcions:
         #print(o)
         link = o.get('href')
+        #print(link)
+        #print(type(link))
         if type(link) == str:
             if 'shtml' in link:
                 link = link[len(s):]
@@ -37,6 +40,7 @@ def escollir_acords_lacuerda(url):
     l_opcions = []
     for i in l_shtml:
         l_opcions.append(url+i)
+
     #print(l_opcions)
     #print(llista_opcions)
     #print(len(llista_opcions))

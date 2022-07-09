@@ -12,14 +12,14 @@ def extreure_acords_cifraclub(sublink):
     #print(soup)
 
     #   EXTREURE paràmetres a tenir en compte per llegir correctament la cançó:
-    tono = soup.find("span", {"id": "cifra_tom"})
-    tono = tono.getText()
+    #tono = soup.find("span", {"id": "cifra_tom"})
+    #tono = tono.getText()
 
-    tuning = soup.find("span", {"data-cy": "song-tuning"})
-    tuning = tuning.getText()
+    #tuning = soup.find("span", {"data-cy": "song-tuning"})
+    #tuning = tuning.getText()
 
-    capo = soup.find("span", {"data-cy": "song-capo"})
-    capo = capo.getText()
+    #capo = soup.find("span", {"data-cy": "song-capo"})
+    #capo = capo.getText()
 
     lletra = soup.find("pre")
     lletra = lletra.getText()
@@ -35,9 +35,9 @@ def extreure_acords_cifraclub(sublink):
     # else:
     #     lletra_amb_tot = tono + "\n" + tuning + "\n" + lletra
 
-    lletra_amb_tot = tono + "\n" + tuning + "\n" + "Capo: " + capo + "\n" + lletra
+    #lletra_amb_tot = "\n" + tuning + "\n" + "Capo: " + capo + "\n" + lletra
 
-    return lletra_amb_tot
+    return lletra
 
 #extreure_acords_cifraclub(sublink)
 #lletra = extreure_acords_cifraclub(sublink)
